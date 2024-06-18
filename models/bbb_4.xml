@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sspaceex xmlns="http://www-verimag.imag.fr/xml-namespaces/sspaceex" version="0.2" math="SpaceEx">
+	<component id="xx_template">
+
+		<param name="one" type="label" local="false" />
+		<param name="two" type="label" local="false" />
+		<param name="three" type="label" local="false" />
+
+		<location id="1" name="forward">
+
+		</location>
+		<location id="2" name="turn">
+		</location>
+		<location id="3" name="communicate">
+		</location>
+		<location id="4" name="delay">
+		</location>
+
+		<transition source="1" target="2">
+			<label>oo</label>
+		</transition>
+		<transition source="2" target="3">
+			<label>tt</label>
+		</transition>
+		<transition source="3" target="4">
+			<label>thr</label>
+		</transition>
+	</component>
+
+	<component id="system">
+		<param name="one" type="label" local="false" />
+		<param name="two" type="label" local="false" />
+		<param name="three" type="label" local="false" />
+		<param name="four" type="label" local="false" />
+		<param name="five" type="label" local="false" />
+
+
+		<bind component="xx_template" as="xx1">
+			<map key="oo">one</map>
+			<map key="tt">two</map>
+			<map key="thr">three</map>
+		</bind>
+		<bind component="xx_template" as="xx2">
+			<map key="oo">one</map>
+			<map key="tt">two</map>
+			<map key="thr">four</map>
+		</bind>
+		<bind component="xx_template" as="xx3">
+			<map key="oo">two</map>
+			<map key="tt">four</map>
+			<map key="thr">five</map>
+		</bind>
+		<bind component="xx_template" as="xx4">
+			<map key="oo">four</map>
+			<map key="tt">five</map>
+			<map key="thr">three</map>
+		</bind>
+
+
+	</component>
+</sspaceex>

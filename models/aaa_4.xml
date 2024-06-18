@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sspaceex xmlns="http://www-verimag.imag.fr/xml-namespaces/sspaceex" version="0.2" math="SpaceEx">
+	<component id="xx_template">
+
+		<param name="one" type="label" local="false" />
+		<param name="two" type="label" local="false" />
+		<param name="three" type="label" local="false" />
+
+		<location id="1" name="forward">
+
+		</location>
+		<location id="2" name="turn">
+		</location>
+		<location id="3" name="communicate">
+		</location>
+		<location id="4" name="delay">
+		</location>
+
+		<transition source="1" target="2">
+			<label>one</label>
+		</transition>
+		<transition source="2" target="3">
+			<label>two</label>
+		</transition>
+		<transition source="3" target="4">
+			<label>three</label>
+		</transition>
+	</component>
+
+	<component id="yy_template">
+
+		<param name="four" type="label" local="false" />
+		<param name="five" type="label" local="false" />
+		<param name="six" type="label" local="false" />
+
+		<location id="1" name="qwe">
+
+		</location>
+		<location id="2" name="asd">
+		</location>
+		<location id="3" name="zxc">
+		</location>
+		<location id="4" name="cvb">
+		</location>
+
+		<transition source="1" target="2">
+			<label>four</label>
+		</transition>
+		<transition source="2" target="3">
+			<label>five</label>
+		</transition>
+		<transition source="3" target="4">
+			<label>six</label>
+		</transition>
+	</component>
+
+
+
+	<component id="system">
+		<param name="one" type="label" local="false" />
+		<param name="two" type="label" local="false" />
+		<param name="three" type="label" local="false" />
+		<param name="four" type="label" local="false" />
+		<param name="five" type="label" local="false" />
+		<param name="six" type="label" local="false" />
+
+
+		<bind component="xx_template" as="xx1">
+			<map key="one">one</map>
+			<map key="two">two</map>
+			<map key="three">three</map>
+		</bind>
+		<bind component="xx_template" as="xx2">
+			<map key="one">one</map>
+			<map key="two">two</map>
+			<map key="three">three</map>
+		</bind>
+
+		<bind component="yy_template" as="yy3">
+			<map key="four">four</map>
+			<map key="five">five</map>
+			<map key="six">six</map>
+		</bind>
+		<bind component="yy_template" as="yy4">
+			<map key="four">four</map>
+			<map key="five">five</map>
+			<map key="six">six</map>
+		</bind>
+	</component>
+</sspaceex>

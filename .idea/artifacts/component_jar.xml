@@ -1,0 +1,11 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="component:jar">
+    <output-path>$PROJECT_DIR$</output-path>
+    <root id="archive" name="component_new encode.jar">
+      <element id="module-output" name="component_new encode" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/ow2/sat4j/org.ow2.sat4j.sat/2.3.4/org.ow2.sat4j.sat-2.3.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/ow2/sat4j/org.ow2.sat4j.core/2.3.4/org.ow2.sat4j.core-2.3.4.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../Myfile/jar/fel.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
